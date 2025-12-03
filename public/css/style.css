@@ -1,0 +1,78 @@
+.area__dinamica {
+    border: 1px solid red;
+    margin: 10px;
+}
+
+.container__titulo h1 {
+    margin: 0px !important;
+    font-weight: 600 !important;
+}
+
+.container__titulo p {
+    color: var(--primary);
+    font-family: "Sometype Mono", monospace;
+    text-transform: uppercase;
+}
+
+.container__table {
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 0px 10px;
+}
+
+.table {
+    font-size: 0.8rem !important;
+}
+
+.table th {
+    
+}
+
+
+.table .td__2 span:nth-child(1) {
+    display: block;
+    font-weight: 500;
+}
+
+.table .td__2 span:nth-child(2) {
+    display: block;
+    color: var(--text-dark);
+}
+
+.table__foto {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}
+
+.status__efetivo {
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 2px 6px;
+}
+
+.status__ativo {
+    border: 1px solid #A3CFBB;
+    color: #0A3622;
+    background-color: #D1E7DD;
+}
+
+.status__agregado {
+    border: 1px solid #F1AEB5;
+    color: #58151C;
+    background-color: #F8D7DA;
+}
+
+
+.status__inativando {
+    border: 1px solid #FFE69C;
+    color: #664D24;
+    background-color: #FFF3CD;
+}
+
+
+.link__whats {
+    color: #37D653;
+}

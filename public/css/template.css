@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  --white: #FFFFFF;
+  --primary: #9760fe;
+  --sidebar-bg: #ffffff;
+  --bg: #dfe0e2;
+  --text-dark: #8b8f96;
+  --text: #000;
+  --link-hover: #f4f5f7;
+  --logout: #FA7575;
+}
+
+/* ---------------------- BASE ------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: "nav area";
+  grid-template-columns: 280px auto;
+  transition: grid-template-columns 0.25s ease;
+  background-color: var(--bg);
+  font-family: "Roboto", sans-serif;
+}
+
+
+body.navbar__oculto {
+  grid-template-columns: 90px auto;
+}
+
+/* ---------------------- SIDEBAR ------------------------ */
+
+.aside {
+  grid-area: nav;
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg);
+  border-radius: 5px;
+  margin: 10px;
+  padding-bottom: 12px;
+  min-height: calc(100vh - 26px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------- TOP ------------------------ */
+
+.sidebar__top {
+  position: relative;
+  padding-right: 45px;
+  padding-top: 10px;
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 16px;
+}
+
+.sidebar__header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.sidebar__header h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Botão recolher */
+.btn__recolher {
+  background-color: var(--white);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--white);
+  position: absolute;
+  top: 5px;
+  right: -10px;
+  background-color: var(--link-hover);
+}
+
+.btn__recolher:hover {
+  border-color: var(--primary);
+}
+
+.btn__recolher svg {
+  transition: transform .25s ease;
+  transform-origin: center;
+  position: static !important;
+}
+
+
+/* ---------------------- BODY / MENU ------------------------ */
+
+.sidebar__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Links gerais */
+.sidebar__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+.sidebar__links .link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  margin: 0 12px;
+  color: var(--text-dark);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 400;
+  position: relative;
+}
+
+.sidebar__links .link:hover {
+  background-color: var(--link-hover);
+  color: var(--text);
+}
+
+.sidebar__links .link:hover svg {
+  color: var(--primary);
+}
+
+.sidebar__links .text {
+  font-size: 14px;
+  line-height: 0;
+}
+
+
+/* ---------------------- TOOLTIP ------------------------ */
+
+.sidebar__links .tooltip {
+  position: absolute;
+  left: 75px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+  background-color: #333;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  color: #fff;
+  transition: opacity .2s ease;
+  z-index: 1000;
+}
+
+.tooltip-left::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #333;
+}
+
+/* Tooltip ativo somente no menu recolhido */
+body.navbar__oculto .sidebar__links a:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---------------------- HIDING WHEN COLLAPSED ------------------------ */
+
+body.navbar__oculto .text,
+body.navbar__oculto .sidebar__header h1,
+body.navbar__oculto .sidebar_profile__name,
+body.navbar__oculto .sidebar_profile__logout {
+  display: none;
+}
+
+/* ---------------------- SEPARATORS ------------------------ */
+
+.sidebar__separator {
+  border-top: 1px solid var(--bg);
+  margin: 14px;
+}
+
+.sidebar_separator__transparent {
+  border-color: transparent;
+}
+
+/* ---------------------- ALINHAMENTO TOPO / BASE ------------------------ */
+
+/* Tudo abaixo do primeiro separator vai para o rodapé */
+.sidebar__separator + .sidebar__links,
+.sidebar__profile {
+  margin-top: auto;
+}
+
+/* ---------------------- PROFILE ------------------------ */
+
+.sidebar__profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 14px;
+  margin-top: 6px;
+  margin-right: 14px;
+}
+
+.sidebar__profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--sidebar-bg);
+  cursor: pointer;
+}
+
+.sidebar__profile img:hover {
+  border-color: var(--primary);
+}
+
+.profile__name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile__email {
+  font-size: 12px;
+  color: var(--text-dark);
+}
+
+.sidebar_profile__logout {
+  color: var(--logout);
+  cursor: pointer;
+}
+
