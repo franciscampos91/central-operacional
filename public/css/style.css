@@ -76,3 +76,10 @@
 .link__whats {
     color: #37D653;
 }
+
+
+/** Bootstrap */
+.form-label {
+    line-height: 0 !important;
+    margin-top: 20px !important;
+}

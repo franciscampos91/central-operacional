@@ -31,8 +31,12 @@
           <div class="modal-body" style="border-top: 1px solid #DFE0E2;">
             <div class="row">
                 <div class="col-md-6">
-                    <label for="nome">Nome</label>
+                    <label for="nome">Nome completo</label>
                     <input type="text" class="form-control" name="nome" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="foto">Carregar foto</label>
+                    <input type="file" class="form-control" name="foto">
                 </div>
             </div>
             <div class="row">
@@ -50,9 +54,46 @@
                     <input type="text" class="form-control" name="re" required>
                 </div>
                 <div class="col-md-4">
-                    <label for="re" class="form-label">Apelido</label>
+                    <label for="apelido" class="form-label">Apelido</label>
                     <input type="text" class="form-control" name="apelido" required>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="equipe" class="form-label">Equipe</label>
+                    <select name="equipe" id="equipe" class="form-select">
+                        <option value="">Selecione...</option>
+                        <option value="Adm">Adm</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="funcao" class="form-label">Função</label>
+                    <select name="funcao" id="funcao" class="form-select">
+                        <option value="Selecione">Selecione...</option>
+                        <option value="Adm">Adm</option>
+                        <option value="Chefe">Chefe</option>
+                        <option value="Supervisor">Supervidor</option>
+                        <option value="Atendente 190">Atendente 190</option>
+                        <option value="Despachador">Despachador</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="status" class="form-label">Status</label>
+                    <select name="status" id="" class="form-select">
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativando">Inativando</option>
+                        <option value="Agregado">Agregado</option>
+                        <option value="Inativo">Inativo</option>
+                        <option value="Movimentado">Movimentado</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-4">
                     <label for="opm" class="form-label">Unidade</label>
                     <input type="text" class="form-control" name="opm" required>
@@ -108,7 +149,7 @@
                     <label for="bairro" class="form-label">Bairro</label>
                     <input type="text" class="form-control" name="bairro">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <label for="cidade" class="form-label">Cidade</label>
                     <input type="text" class="form-control" name="cidade">
                 </div>
@@ -136,14 +177,14 @@
                 </div>
                 <div class="col-md-3">
                     <label for="previsao-inatividade" class="form-label">Previsão inatividade</label>
-                    <input type="text" class="form-control" name="previsao-inatividade">
+                    <input type="date" class="form-control" name="previsao-inatividade">
                 </div>
             </div>
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="submit" class="btn btn-primary">Gravar</button>
           </div>
       </form>
     </div>

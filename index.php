@@ -2,15 +2,10 @@
 
     require_once 'app/Core/Core.php';
     require_once 'lib/Database/Connection.php';
-    require_once 'app/Model/Produtos.php';
-    require_once 'app/Model/Clientes.php';
-
     require_once 'app/Controller/HomeController.php';
     require_once 'app/Controller/ErrorController.php';
-    require_once 'app/Controller/ProdutosController.php';
-    require_once 'app/Controller/ClientesController.php';
-
     require_once 'app/Controller/EfetivoController.php';
+    require_once 'app/Controller/EscalaController.php';
 
     require_once 'vendor/autoload.php';
 
