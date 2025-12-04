@@ -31,4 +31,15 @@ class EfetivoController
         echo $conteudo;
     }
 
+    public function buscaSIRH()
+    {
+        var_dump($_POST);
+        echo 'BUSCA SIRH';
+    }
+
+    public function gravarNovo()
+    {
+        var_dump($_POST);
+        echo 'Gravar Novo';
+    }
 }

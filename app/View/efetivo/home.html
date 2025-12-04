@@ -1,5 +1,155 @@
 <titulo-bloco nome="Colaboradores" desc="Relação de efetivo"></titulo-bloco>
 
+
+<!-- Button trigger modal Novo -->
+<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalNovo">
+  Novo
+</button>
+
+<!-- Modal Novo -->
+<div class="modal fade" id="modalNovo" tabindex="-1" aria-labelledby="modalNovoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalNovoLabel">Cadastrar colaborador</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Busca SIRH -->
+         <form action="?pagina=efetivo&metodo=buscaSIRH" method="post" class="row">
+            <div class="col-md-3">
+                <label class="form-label">Registro</label>
+                <input type="text" name="re" class="form-control">
+            </div>
+            <div class="col-md-1">
+                <label class="form-label">&nbsp;</label>
+                <button type="submit" class="btn btn-dark">Ir</button>
+            </div>
+         </form>
+      </div>
+      <form action="?pagina=efetivo&metodo=gravarNovo" method="post">
+          <div class="modal-body" style="border-top: 1px solid #DFE0E2;">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" name="nome" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="ptgr" class="form-label">Nível</label>
+                    <select name="ptgr" id="ptgr" class="form-select" required>
+                        <option value="">Selecione...</option>
+                        <option value="Operacional">Operacaional</option>
+                        <option value="Supervisor">Supervisor</option>
+                        <option value="Chefia">Chefia</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="re" class="form-label">Registro</label>
+                    <input type="text" class="form-control" name="re" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="re" class="form-label">Apelido</label>
+                    <input type="text" class="form-control" name="apelido" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="opm" class="form-label">Unidade</label>
+                    <input type="text" class="form-control" name="opm" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="re" class="form-label">Código unidade</label>
+                    <input type="text" class="form-control number" name="codopm" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="re" class="form-label">Telefone</label>
+                    <input type="text" class="form-control number" maxlength="11" name="telefone">
+                </div>
+                <div class="col-md-6">
+                    <label for="re" class="form-label">E-mail funcional</label>
+                    <input type="email" class="form-control" name="email">
+                </div>
+                <div class="col-md-3">
+                    <label for="re" class="form-label">CPF</label>
+                    <input type="text" class="form-control" name="cpf">
+                </div>
+                <div class="col-md-3">
+                    <label for="re" class="form-label">RG</label>
+                    <input type="text" class="form-control" name="rg">
+                </div>
+                <div class="col-md-3">
+                    <label for="re" class="form-label">Data nascimento</label>
+                    <input type="date" class="form-control" name="data-nascimento">
+                </div>
+                <div class="col-md-3">
+                    <label for="re" class="form-label">Data admissão</label>
+                    <input type="date" class="form-control" name="data-admissao">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <label for="endereco" class="form-label">Endereço</label>
+                    <input type="text" class="form-control" name="endereco">
+                </div>
+                <div class="col-md-2">
+                    <label for="num" class="form-label">Nº</label>
+                    <input type="text" class="form-control" name="num">
+                </div>
+                <div class="col-md-2">
+                    <label for="complemento" class="form-label">Complemento</label>
+                    <input type="text" class="form-control" name="complemento">
+                </div>
+                <div class="col-md-3">
+                    <label for="referencia" class="form-label">Referência</label>
+                    <input type="text" class="form-control" name="referencia">
+                </div>
+                <div class="col-md-4">
+                    <label for="bairro" class="form-label">Bairro</label>
+                    <input type="text" class="form-control" name="bairro">
+                </div>
+                <div class="col-md-2">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" name="cidade">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="tel-recado" class="form-label">Telefone recado</label>
+                    <input type="text" class="form-control" name="tel-recado">
+                </div>
+                <div class="col-md-3">
+                    <label for="contato-recado" class="form-label">Contato recado</label>
+                    <input type="text" class="form-control" name="contato-recado">
+                </div>
+                <div class="col-md-3">
+                    <label for="email-particular" class="form-label">E-mail particular</label>
+                    <input type="text" class="form-control" name="email-particular">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="tempo-averbado" class="form-label">Tempo averbado</label>
+                    <input type="text" class="form-control" name="tempo-averbado">
+                </div>
+                <div class="col-md-3">
+                    <label for="previsao-inatividade" class="form-label">Previsão inatividade</label>
+                    <input type="text" class="form-control" name="previsao-inatividade">
+                </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 <div class="container__table">
 
     <table class="table table-sm ">
