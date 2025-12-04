@@ -63,21 +63,22 @@ O objetivo do sistema é oferecer uma plataforma simples e eficiente para gerenc
 
 ## 📂 Estrutura de Pastas
 app/
-├ Controller/ → Lógica dos controllers
-├ Core/ → Núcleo do sistema (roteamento)
-├ Model/ → Models e regras de negócio
-├ Template/ → Template geral
-└ View/ → Views do Twig organizadas por módulo
+ ├─ Controller/      # Controladores do sistema (lógica de entrada)
+ ├─ Core/            # Núcleo da aplicação, roteamento e carregamento
+ ├─ Model/           # Models e regras de negócio
+ ├─ Template/        # Template base principal (layout)
+ └─ View/            # Arquivos Twig organizados por módulo (efetivo, escala, etc.)
 
 public/
-├ css/
-├ js/
-└ img/
+ ├─ css/             # Arquivos CSS
+ ├─ js/              # Scripts JavaScript
+ └─ img/             # Imagens e ícones do sistema
 
-vendor/ → Dependências do Composer
+vendor/              # Dependências instaladas pelo Composer
 
-index.php → Arquivo inicial do sistema
-README.md → Documentação
+index.php            # Arquivo inicial (bootstrap da aplicação)
+README.md            # Documentação do projeto
+
 
 
 ## 👨‍💻 Autor
