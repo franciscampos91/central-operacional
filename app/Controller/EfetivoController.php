@@ -11,6 +11,7 @@ class EfetivoController
         $template = $twig->load('efetivo/home.html');
 
         $parametros = array();
+        $parametros['efetivo'] = Efetivo::listarEfetivo();
     
         $conteudo = $template->render($parametros);
 
@@ -42,4 +43,6 @@ class EfetivoController
         var_dump($_POST);
         echo 'Gravar Novo';
     }
+
+
 }

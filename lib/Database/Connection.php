@@ -12,7 +12,7 @@
             // Verifica se a conexão ainda não foi estabelecida
             if (self::$conn == null) {
                 // Cria uma nova conexão PDO com o banco de dados MySQL
-                self::$conn = new PDO('mysql: host=localhost; dbname=vendas;', 'root', '');
+                self::$conn = new PDO('mysql: host=localhost; dbname=copom;', 'root', '');
 
                 // Configurar para UTF-8
                 self::$conn->exec("SET NAMES 'utf8mb4'");

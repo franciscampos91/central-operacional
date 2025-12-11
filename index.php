@@ -7,6 +7,8 @@
     require_once 'app/Controller/EfetivoController.php';
     require_once 'app/Controller/EscalaController.php';
 
+    require_once 'app/Model/Efetivo.php';
+
     require_once 'vendor/autoload.php';
 
 
