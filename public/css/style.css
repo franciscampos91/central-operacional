@@ -77,6 +77,12 @@
     color: #37D653;
 }
 
+.card_row__pessoa {
+    border: 1px solid #8D8D8D;
+    background-color: #F9F9F9;
+    color: #141414;
+    border-radius: 4px;
+}
 
 /** Bootstrap */
 .form-label {
