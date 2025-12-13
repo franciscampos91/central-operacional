@@ -80,8 +80,51 @@
 .card_row__pessoa {
     border: 1px solid #8D8D8D;
     background-color: #F9F9F9;
-    color: #141414;
-    border-radius: 4px;
+    color: #141414 !important;
+    border-radius: 6px;
+    margin-bottom: 2px;
+    padding: 3px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_row__pessoa img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.card__equipe_A {
+    color: #2D8654;
+    color: #064421;
+    border-color: #41C77C;
+    background-color: #4CE78F;
+}
+
+.card__equipe_B {
+    color: #582D1D;
+    border-color: #EDC499;
+    background-color: #FFD3A4;
+}
+
+.card__equipe_C {
+    color: #2462A9;
+    border-color: #63CCF2;
+    background-color: #CEEBF6;
+}
+
+.card__equipe_D {
+    color: #852a39;
+    border-color: #f16483;
+    background-color: #FFC9D5;
+}
+
+.card__equipe_E {
+    color: #a38539;
+    border-color: #f7c957;
+    background-color: #FFF8C4;
 }
 
 /** Bootstrap */
