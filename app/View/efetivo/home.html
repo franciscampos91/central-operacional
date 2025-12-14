@@ -194,7 +194,7 @@
 <div class="row" style="background-color: #fff;">
 
     <div class="col-md-3" style="display: flex; flex-direction: column;">
-        <div class="card_row__pessoa card__equipe_A">Operacional D92014-M Moreira <img src="public/img/perfil/D92014.jpg" alt=""></div>
+        <div class="card_row__pessoa card__equipe_A" data-bs-toggle="modal" data-bs-target="#modalCard">Operacional D92014-M Moreira <img src="public/img/perfil/D92014.jpg" alt=""></div>
         <div class="card_row__pessoa card__equipe_B">Operacional D92014-M Moreira <img src="public/img/perfil/D92014.jpg" alt=""></div>
         <div class="card_row__pessoa card__equipe_C">Operacional D92014-M Moreira <img src="public/img/perfil/D92014.jpg" alt=""></div>
         <div class="card_row__pessoa card__equipe_D">Operacional D92014-M Moreira <img src="public/img/perfil/D92014.jpg" alt=""></div>
@@ -259,5 +259,39 @@
         
 
     </table>
+
+
+    <!-- Modal Card -->
+    <div class="modal fade" id="modalCard" tabindex="-1" aria-labelledby="modalCardLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">        
+                <div class="modal-body card_modal__body">
+                    <div class="card_modal__foto">
+                        <img src="public/img/perfil/B10492.jpg" alt="">
+                    </div>
+                    <div class="card_modal__desc">
+
+                        
+                        <h4>Marcos Azevedo Lima</h4>
+
+                        <p>Supervisor B10492-7</p>
+
+                        <div class="card__equipe_A">Adm</div> <span>Aux Adm</span>
+
+                        
+                        
+                    </div>                    
+                    <div class="card_modal__button">
+                        <button class="btn btn__secondary">
+                            Fechar
+                        </button>
+                        <button class="btn btn__primary">
+                            Ver mais
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>

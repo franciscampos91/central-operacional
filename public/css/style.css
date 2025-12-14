@@ -127,6 +127,69 @@
     background-color: #FFF8C4;
 }
 
+
+.card_modal__body {
+    padding: 0px !important;
+    border-radius: 7px;
+    overflow: hidden;
+    height: 250px;
+    display: grid;
+    grid-template-areas: "foto desc" "foto button";
+    grid-template-columns: 187.5px auto;
+    grid-template-rows: auto 60px;
+}
+
+.card_modal__foto {
+    width: 187.5px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    grid-area: foto;
+}
+
+.card_modal__foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_modal__desc {
+    grid-area: desc;
+    padding: 15px;
+}
+
+.card_modal__button {
+    grid-area: button;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.btn__primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn__primary:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    text-decoration: underline;
+    filter: saturate(60%);
+}
+
+.btn__secondary {
+    border-color: var(--primary);
+    filter: saturate(60%);
+}
+
+.btn__secondary:hover {
+    border-color: var(--primary);
+    text-decoration: underline;
+}
+
 /** Bootstrap */
 .form-label {
     line-height: 0 !important;
