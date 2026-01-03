@@ -4,7 +4,7 @@ class EscalaController
 {
     public function index()
     {
-        $loader = new \Twig\Loader\FilesystemLoader('app/View');
+        $loader = new \Twig\Loader\FilesystemLoader(['app/View', 'public/js']);
         $twig = new \Twig\Environment($loader);
 
         $template = $twig->load('escala/index.html');
@@ -14,7 +14,7 @@ class EscalaController
 
     public function previsao()
     {
-        $loader = new \Twig\Loader\FilesystemLoader('app/View');
+        $loader = new \Twig\Loader\FilesystemLoader(['app/View', 'public/js']);
         $twig = new \Twig\Environment($loader);
 
         $template = $twig->load('escala/previsao.html');

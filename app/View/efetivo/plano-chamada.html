@@ -1,0 +1,49 @@
+<titulo-bloco nome="Plano de chamada" desc="Colaboradores CEOP"></titulo-bloco>
+
+<div class="container__table">
+
+    <table class="table table-bordered table-striped text-nowrap">
+
+        <tr>
+            <th>Grad.</th>
+            <th>RE</th>
+            <th>Nome</th>
+            <th>Guerra</th>
+            <th>E-mail funcional</th>
+            <th>Telefone</th>
+            <th>E-mail pessoal</th>
+            <th>Endereço</th>
+            <th>Num.</th>
+            <th>Complemento</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>Referência</th>
+            <th>Contato recado</th>
+            <th>Telefone recado</th>
+        </tr>
+
+         {% for pessoa in efetivo %}
+
+            <tr>
+                <td>{{ pessoa.pt_gr }}</td>
+                <td>{{ pessoa.re }}-{{ pessoa.dg_re }}</td>
+                <td>{{ pessoa.nome }}</td>
+                <td>{{ pessoa.guerra }}</td>
+                <td>{{ pessoa.email }}</td>
+                <td>{{ pessoa.telefone }}</td>
+                <td>{{ pessoa.email_particular }}</td>
+                <td>{{ pessoa.endereco }}</td>
+                <td>{{ pessoa.numero }}</td>
+                <td>{{ pessoa.complemento }}</td>
+                <td>{{ pessoa.bairro }}</td>
+                <td>{{ pessoa.cidade }}</td>
+                <td>{{ pessoa.referencia }}</td>
+                <td>{{ pessoa.contato_recado }}</td>
+                <td>{{ pessoa.telefone_recado }}</td>
+            </tr>
+
+         {% endfor %}
+
+    </table>
+
+</div>
