@@ -1,6 +1,29 @@
 <titulo-bloco nome="Plano de chamada" desc="Colaboradores CEOP"></titulo-bloco>
 
+<div class="container__menu_opcoes">
+    
+    <div class="menu_opcoes__item" onclick="gerarCSV()">
+        <div class="icon">
+            <img src="public/img/icons/csv.png" alt="">
+        </div>
+        <div class="desc">
+            Importar para CSV
+        </div>
+    </div>
+
+    <div class="menu_opcoes__item" onclick="abrirImpressao()">
+        <div class="icon">
+            <img src="public/img/icons/impressao.png" alt="">
+        </div>
+        <div class="desc">
+            Visualizar impressão
+        </div>
+    </div>
+
+</div>
+
 <div class="container__table">
+
 
     <table class="table table-bordered table-striped text-nowrap">
 
@@ -47,3 +70,21 @@
     </table>
 
 </div>
+
+
+<script>
+
+function abrirImpressao() {
+  window.open(
+    'app/View/efetivo/impressao-plano-chamada.php', 
+    '_blank',
+    'width=1123,height=794'
+  );
+}
+
+
+function gerarCSV() {
+    window.location.href = 'app/View/efetivo/plano-chamada-csv.php';
+}
+
+</script>

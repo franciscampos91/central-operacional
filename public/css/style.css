@@ -267,6 +267,34 @@
     align-items: center;
 }
 
+
+.container__menu_opcoes {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.menu_opcoes__item {
+    display: flex;
+    gap: 5px;
+    border-radius: 5px;
+    min-width: 200px;
+    align-items: center;
+    cursor: pointer;
+    height: 40px;
+    padding: 2px 4px;
+}
+
+.menu_opcoes__item:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: var(--primary);
+    background-color: var(--link-hover);
+}
+
+.menu_opcoes__item img {
+    height: 32px;
+}
+
 /** Bootstrap */
 .form-label {
     line-height: 0 !important;
